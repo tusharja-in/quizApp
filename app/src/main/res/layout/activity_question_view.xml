@@ -1,9 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     tools:context=".QuestionViewActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:orientation="vertical"
+        android:gravity="center">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/tv_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Which country flag is it?"
+            android:textSize="30sp"
+            android:textColor="@color/question_color"
+            android:textStyle="bold"/>
+        <ImageView
+            android:id="@+id/iv_flag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_flag_of_argentina"
+            android:layout_marginTop="30dp"
+            />
+        <LinearLayout
+            android:id="@+id/ll_progress_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            android:gravity="center_vertical">
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:progress="5"
+                android:indeterminate="false"
+                android:max="10"
+                android:maxHeight="50dp"
+                android:progressTint="@color/purple_500"
+                />
+            <TextView
+                android:id="@+id/tv_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0/10"
+                android:layout_marginLeft="10dp"
+                android:textColorHint="@color/teal_200"
+                android:textSize="16sp"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_option_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Apple"
+            android:background="@drawable/default_options_border"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            />
+        <TextView
+            android:id="@+id/tv_option_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ball"
+            android:background="@drawable/default_options_border"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            />
+        <TextView
+            android:id="@+id/tv_option_three"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cat"
+            android:background="@drawable/default_options_border"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            />
+        <TextView
+            android:id="@+id/tv_option_four"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dog"
+            android:background="@drawable/default_options_border"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            />
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SUBMIT"
+            android:textSize="18sp"
+            android:padding="10dp"
+            android:layout_marginTop="16dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            />
+
+    </LinearLayout>
+
+</ScrollView>
