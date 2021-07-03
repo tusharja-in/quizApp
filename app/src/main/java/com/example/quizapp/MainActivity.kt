@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
             }
             else{
                 val intent=Intent(this,QuestionViewActivity::class.java)
+                intent.putExtra(Constants.USER_NAME,nameInput.text.toString())
                 startActivity(intent)
                 finish()
             }
